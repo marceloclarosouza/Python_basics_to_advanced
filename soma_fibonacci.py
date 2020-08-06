@@ -7,10 +7,14 @@ num = 0
 f1 = 1
 f2 = 1
 temp = 0
+soma = 0
 
-while num < 4000000:
+while f2 < 4000000:
     num = f1 + f2
-    print(num)
+    print(f2)
+    if f2 % 2 == 0:
+        soma += f2
     temp = f2
     f2 = num
-    f1 = temp    
+    f1 = temp
+print(f'soma = {soma}')
