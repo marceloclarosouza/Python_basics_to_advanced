@@ -10,4 +10,4 @@ def triangulo_lateral(largura):
            for n in range(largura -1, 0, -1):
                 print('*'*n)
        
-triangulo_lateral(10)
+triangulo_lateral(15)
