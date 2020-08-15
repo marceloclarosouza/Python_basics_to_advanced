@@ -8,3 +8,6 @@ teste = gerador_funcao_quadratica(2, 3, -5)##gera do "f(x)"
 print(teste(0))
 print(teste(1))
 print(teste(2))
+
+#ou
+print(gerador_funcao_quadratica(2,3,-5)(2))
