@@ -27,3 +27,11 @@ print(inativos)
 ##mesma logica usando not. O not retorna true ,pois uma lista vazia transformada em boolean é falso
 inativos2 = list(filter(lambda usuario: not usuario["tweets"], dados))
 print(inativos2)
+
+"""usando filter e map juntos"""
+
+nomes = ["ana", "aline", "craudia"]
+#printar os nomes das instrutoras com menos de 5 carcters
+
+print(list(map(lambda nome: f'Sua instrutura é {nome}', filter(lambda nome: len(nome)>4, nomes))))
+
