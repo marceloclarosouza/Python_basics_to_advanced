@@ -1,5 +1,6 @@
 import math
 
+
 def area(r):
     """Calcula e retorna a area de um circulo de raio 'r'"""
     return math.pi * (r**2)
@@ -7,4 +8,11 @@ def area(r):
 raio = [2,4,5,6,7,8,1,1.6]
 
 area = map(area, raio)##Nesse caso o map substitui o For, e passa toda a lista pela função
+print(list(area))
+
+
+###outra forma usando lambda
+
+raio = [2,4,5,6,7,8,1,1.6]
+area = map(lambda r: math.pi*(r**2), raio)
 print(list(area))
