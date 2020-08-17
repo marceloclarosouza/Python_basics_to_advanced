@@ -24,6 +24,6 @@ dados = [{"username" : "calos", "tweets": ["oi", "tudo bem"]},
 inativos = list(filter(lambda usuario: len(usuario["tweets"])==0,dados))
 print(inativos)
 
-##mesma logica usando not. O not retorna true se a lista estiver vazia
+##mesma logica usando not. O not retorna true ,pois uma lista vazia transformada em boolean é falso
 inativos2 = list(filter(lambda usuario: not usuario["tweets"], dados))
 print(inativos2)
