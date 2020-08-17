@@ -31,7 +31,7 @@ print(inativos2)
 """usando filter e map juntos"""
 
 nomes = ["ana", "aline", "craudia"]
-#printar os nomes das instrutoras com menos de 5 carcters
+#printar os nomes das instrutoras com mais de 4 carcteres
 
 print(list(map(lambda nome: f'Sua instrutura é {nome}', filter(lambda nome: len(nome)>4, nomes))))
 
