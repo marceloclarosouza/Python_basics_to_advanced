@@ -14,7 +14,9 @@ print(all([num%2 ==0 for num in [3,4,6,8]]))
 print(all([num%2 !=0 for num in [2,4,6,8,10]]))
 
 
-# any() return Trye if any of the iterables are True
+#any() return Trye if any of the iterables are True
 
-#print(any([0,1,2,3,4]))
-#print(any([0]))
+print(any([0,1,2,3,4]))
+print(any([0]))
+
+print(any([num%2 ==0 for num in [1,3,5,7]]))
