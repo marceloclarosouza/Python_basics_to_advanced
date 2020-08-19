@@ -7,3 +7,8 @@ aluno = ("Maria", "Pedro", "Jose")
 maior_nota = {dado[0]: max(dado[1], dado[2]) for dado in zip(aluno, prova1, prova2)}
 print(maior_nota)
 
+print("\n")
+
+maior_nota = zip(aluno, map(lambda nota: max(nota), zip(prova1, prova2)))
+print(dict(maior_nota))
+
