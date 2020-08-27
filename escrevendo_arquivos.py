@@ -10,7 +10,6 @@ with (open ("fruta.txt", "w")) as data:
     while True:
         fruta = input("Digite o nome de uma fruta ou sair\n")
         if fruta != 'sair':
-            data.write(fruta)
-            data.write("\n")
+            data.write(fruta + "\n")
         else:
             break
