@@ -9,3 +9,7 @@ data.split(' ')##cria uma lista de strings separdas por espaco
 
 data.close() #fecha a coneção com o arquivo aberto open()
 
+
+with(open('texto.txt')) as arquivo##o bloco with abre e fecha o arquivo automaticamente após a execução
+    print(arquivo.readlines())
+
