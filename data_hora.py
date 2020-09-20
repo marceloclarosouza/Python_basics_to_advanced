@@ -29,8 +29,45 @@ print(backup)
 backup = datetime.datetime.combine((datetime.datetime.now() + datetime.timedelta(days = 1)), datetime.time())
 print(backup.weekday())
 
-#formatar data e hora usando strftime
+#formatar data e hora usando strftime   F
 
 hoje = datetime.datetime.now()
-hoje_formatado = hoje.strftime("%d-%m-%Y %H:%M:%S")
+hoje_formatado = hoje.strftime("%d-%m-%Y %H:%M:%S")#%B retorna o nome do mes, %b retorna a sigla do mes; %Y 2020, %y 20
 print(hoje_formatado)
+
+
+#formatar data e hora usando strptime   P
+
+data = input("d/m/ano\n")
+data_corrigida = datetime.datetime.strptime(data, '%d/%m/%Y')
+print(data_corrigida)
+
+#somente hora
+
+almoco = datetime.time(12,30,0)
+print(almoco)
+
+"""
+#configurar data e hora para portugues
+#pip install textblob
+
+import datetime
+from textblob import TextBlob
+
+def formata_data(data):
+    return f"{data.day} de {TextBlob(data.strftime('%B')).translate(to = 'pt-br')} de {data.year}"
+
+data = datetime.datetime.now()
+print(data)"""
+
+
+#verificar tempo de execução de um teste
+import timeit, functools
+
+def test(n):
+	soma = 0
+	for num in range(n*200):
+		soma = soma + num**num+4
+	return soma
+
+print(timeit.timeit(functools.partial(test, 5), number = 1000))
